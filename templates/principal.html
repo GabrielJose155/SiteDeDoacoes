@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Doações</title>
+    <link rel="stylesheet" href="/static/principal.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Sistema de Doações</h1>
+    </header>
+    <main>
+        <div class="central-buttons">
+            <button onclick="window.location.href='/pagcadastroroupas'">Quero Doar</button>
+            <button onclick="window.location.href='/listar_roupas'">Quero Receber</button>
+            <button onclick="window.location.href='/MinhaArea'">Minha Área</button>
+        </div>
+    </main>
+    <script>
+        // Exibe as opções da Minha Área ao clicar no botão
+        const minhaAreaBtn = document.getElementById('minhaAreaBtn');
+        const minhaAreaOpcoes = document.getElementById('minhaAreaOpcoes');
+        minhaAreaBtn.addEventListener('click', () => {
+            minhaAreaOpcoes.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

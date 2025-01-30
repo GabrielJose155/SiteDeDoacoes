@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doar Roupas</title>
+    <link rel="stylesheet" href="/static/Croupa.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Doação de Roupas</h1>
+    </header>
+    <main>
+        <form action="/Croupas" method="POST">
+            <label for="tipo">Tipo de Roupa:</label>
+            <input type="text" id="tipo" name="tipo"><br><br>
+
+            <label for="tamanho">Tamanho:</label>
+            <input type="text" id="tamanho" name="tamanho"><br><br>
+
+            <label for="estado">Estado da Roupa:</label>
+            <select id="estado" name="estado">
+                <option value="novo">Novo</option>
+                <option value="usado">Usado</option>
+            </select><br><br>
+
+            <label for="descricao">Descrição:</label>
+            <textarea type="text" id="descricao" name="descricao"></textarea><br><br>
+
+
+            <button type="submit">Cadastrar</button>
+
+            <a href="/sair" class="button">Sair</a>
+
+        </form>
+    </main>
+</body>
+</html>

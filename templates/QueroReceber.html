@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações Disponíveis</title>
+    <link rel="stylesheet" href="/static/QueroReceber.css">
+</head>
+<body>
+    <header>
+        <h1>Doações Disponíveis</h1>
+        <p>Aqui serão exibidas as doações cadastradas.</p>
+    </header>
+    <main>
+        {% for roupas in lista %}
+            <p> {{ roupas[0] }} - {{ roupas[1] }} - {{ roupas[2] }} - {{ roupas[3] }}</p>
+        {% endfor %}
+    </main>
+</body>
+</html>

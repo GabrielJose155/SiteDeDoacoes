@@ -1,0 +1,110 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Títulos principais */
+h1 {
+    color: #3498db;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #2980b9;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Caixa de cadastro */
+.Cadastro {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 46%; /* Reduzi a largura para melhor aparência */
+    margin: 20px auto;
+    padding: 30px;
+    text-align: left;
+    height: 500px;
+}
+
+/* Campos do formulário */
+label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%; /* Agora ocupa toda a largura da caixa */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+/* Estilização do botão */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%; /* O botão ocupa toda a largura */
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Estilização da imagem */
+.Cadastro img {
+    display: block;
+    width: 100px; /* Tamanho fixo */
+    height: auto;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Tornando o formulário responsivo */
+@media screen and (max-width: 768px) {
+    .Cadastro {
+        width: 90%; /* Ajusta a largura em telas menores */
+    }
+}
+
+button butao {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%; /* O botão ocupa toda a largura */
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+

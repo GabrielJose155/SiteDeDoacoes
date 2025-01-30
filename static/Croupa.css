@@ -1,0 +1,117 @@
+/* Resetando margens e paddings para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte e o fundo do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #bfddf3;  /* Cor suave de fundo */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #3d7bb8; /* Cor de fundo do cabeçalho */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para o título do cabeçalho */
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Estilizando a seção principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);  /* Subtrai o espaço do cabeçalho */
+    padding: 10px;
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra forte */
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: -5px;
+    color: #444;
+}
+
+/* Estilizando os campos de entrada (input, select, textarea) */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s;
+}
+
+/* Foco nos campos de entrada */
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #00509e;
+    outline: none;
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #00509e;  /* Cor de fundo do botão */
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para o campo de descrição (textarea) */
+textarea {
+    height: 150px;
+    resize: vertical;  /* Permite que o usuário redimensione a altura */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    select,
+    textarea,
+    button {
+        font-size: 1rem;
+    }
+}
