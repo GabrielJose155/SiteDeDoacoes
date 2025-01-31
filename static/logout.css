@@ -1,0 +1,47 @@
+.logout-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout-button {
+    background-color: #dc3545; /* Vermelho para indicar logout */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Tom mais escuro no hover */
+    transform: scale(1.05);
+}
+
+.voltar-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.voltar-button {
+    background-color: #dc3545; /* Vermelho para indicar logout */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.voltar-button:hover {
+    background-color: #c82333; /* Tom mais escuro no hover */
+    transform: scale(1.05);
+}

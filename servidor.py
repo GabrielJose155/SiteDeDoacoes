@@ -45,7 +45,6 @@ def ir_principal():
         texto = 'O login que você fez não existe, tente novamente!'
         return render_template('login.html', texto = texto )
 
-
 @app.route('/principal', methods= ['GET', 'POST'])
 def doar():
     return render_template('Croupas.html')
@@ -53,32 +52,26 @@ def doar():
 #botão quero doar
 @app.route('/pagcadastroroupas')
 def mostrar_pag_cadatro_roupas():
-    return render_template('Croupas.html')
+
+    if 'login' in session:
+        roupas = dao.inserir_roupa('tipo', 'tamanho', 'estado', 'descricao', 'email')
+        return render_template('Croupas.html', lista=roupas)
+    else:
+        return render_template('login.html')
 
 @app.route('/sair')
 def sair_pagCroupas():
     return render_template('principal.html')
 
-@app.route('/protecao')
-def protecao():
-    if 'login' in session:
-        roupas = dao.inserir_roupa(session['email'])
-        return render_template('Croupas.html', lista=roupas)
-    else:
-        return render_template('login.html')
-
-@app.route('/Croupas', methods=['POST'])
+@app.route('/Croupas', methods=['POST', 'GET'])
 def doar_roupas():
     tipo = request.form.get('tipo')
     tamanho = request.form.get('tamanho')
     estado = request.form.get('estado')
     descricao = request.form.get('descricao')
-    email = session['login']
-
-    if dao.inserir_roupa(tipo, tamanho, estado, descricao, email):
-        return redirect(url_for('protecao'))
-    else:
-        return render_template('login.html')
+    email = request.form.get('email')
+    dao.inserir_roupa(tipo, tamanho, estado, descricao, email)
+    return render_template('Croupas.html')
 
 @app.route('/listar_roupas', methods=['GET','POST'])
 def listar_roupas():
@@ -86,9 +79,13 @@ def listar_roupas():
     print(roupas)
     return render_template('QueroReceber.html', lista=roupas)
 
-@app.route('/MinhaArea')
-def minha_area():
-    return render_template('MinhaArea.html')
+@app.route('/logout', methods=['GET'])
+def sair():
+    return render_template('login.html')
+
+@app.route('/voltar', methods=['GET'])
+def volta():
+    return render_template('principal.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

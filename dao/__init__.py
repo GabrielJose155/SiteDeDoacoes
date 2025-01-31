@@ -53,7 +53,6 @@ def inserir_roupa(tipo, tamanho, estado, descricao, email):
         cur.execute(sql)
 
     except psycopg2.IntegrityError:
-        #volta que deu ruim
         conn.rollback()
         exito = False
     else:
@@ -70,7 +69,7 @@ def inserir_roupa(tipo, tamanho, estado, descricao, email):
 def listar_roupas():
     con = conectardb()
     cur = con.cursor()
-    sql = f"SELECT  tipo, tamanho, estado, descricao  from cadastroderoupas"
+    sql = f"SELECT  tipo, tamanho, estado, descricao, email  from cadastroderoupas"
     cur.execute(sql)
     saida = cur.fetchall()
 
