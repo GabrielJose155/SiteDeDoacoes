@@ -10,7 +10,7 @@ def cadastro():
     if request.method == 'GET':
         return  render_template('cadastro.html')
     elif request.method == 'POST':
-        # Recebe os dados enviados pelo formulário
+
         nome = request.form.get('nome')
         telefone = request.form.get('telefone')
         email = request.form.get('email')
@@ -18,6 +18,7 @@ def cadastro():
         dao.inserir_user(nome, telefone, email, senha)
         session['longin'] = email
         msg= 'Usuário inserido com sucesso!'
+
         return render_template('login.html' ,texto=msg)
     else:
         tex = 'Erro ao inserir usuário.'
@@ -49,7 +50,6 @@ def ir_principal():
 def doar():
     return render_template('Croupas.html')
 
-#botão quero doar
 @app.route('/pagcadastroroupas')
 def mostrar_pag_cadatro_roupas():
 
@@ -59,9 +59,6 @@ def mostrar_pag_cadatro_roupas():
     else:
         return render_template('login.html')
 
-@app.route('/sair')
-def sair_pagCroupas():
-    return render_template('principal.html')
 
 @app.route('/Croupas', methods=['POST', 'GET'])
 def doar_roupas():
